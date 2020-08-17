@@ -45,7 +45,7 @@ class Controller
             throw new \ErrorException('Your are not allowed to name a goat.');
         }
 
-        if (User::isGodparent()) {
+        if ($user->goatNamed) {
             throw new \ErrorException('Your already named a goat. You can\'t name a second one.');
         }
 

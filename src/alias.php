@@ -65,8 +65,3 @@ function isAuth() : bool
 {
     return NameYourGoat\User::isAuth();
 }
-
-function isGodparent() : bool
-{
-    return NameYourGoat\User::isGodparent();
-}
