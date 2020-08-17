@@ -391,6 +391,7 @@ main > div.column {
     }
 
     .modal {
+        max-width: 1000px;
         padding: 10px;
     }
 
