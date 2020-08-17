@@ -1,0 +1,453 @@
+/************************************************
+ * VARIABLES
+ ***********************************************/
+
+:root {
+    --black: #3b3721;
+    --brown: #774e24;
+    --ocre: rgb(160, 80, 80);
+    --title-font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+
+/************************************************
+ * GENERAL
+ ***********************************************/
+
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    color: var(--black);
+    font-family: Merriweather, Georgia, serif;
+    font-size: 16px;
+    font-size: 1.2em;
+    line-height: 1.75;
+    background: url("img/straw.png") repeat;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 50px auto;
+    text-decoration: underline var(--ocre);
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: var(--title-font-family);
+}
+
+p {
+    margin: 0 0 1.75em;
+    text-align: justify;
+}
+
+ol, ul {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+li {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brown);
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: var(--black);
+}
+
+p a, ul a {
+    text-decoration: underline dashed var(--brown);
+}
+
+#page {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 40px;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+/************************************************
+ * COMPONENT > MODAL
+ ***********************************************/
+
+.modal {
+    position: fixed;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    margin-left: -40px;
+    z-index: 999;
+    overflow: hidden;
+
+    background-color: white;
+    transform: scale(0);
+
+    padding: 40px;
+}
+
+.modal:target {
+    transform: scale(1);
+}
+
+.modal > nav {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.modal > nav > a {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.modal > nav > a[rel="parent"] {
+    border: 1px solid var(--black);
+}
+
+/************************************************
+ * COMPONENT > MODAL of type LIGHTBOX
+ ***********************************************/
+
+figure.modal {
+    display: grid;
+    grid-template-rows: 50px;
+    place-items: center;
+    text-align: center;
+}
+
+figure.modal > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+figure.modal > figcaption {
+    font-size: 1.3em;
+}
+
+
+/************************************************
+ * HEADER
+ ***********************************************/
+
+#masthead > * {
+    text-align: center;
+}
+
+#masthead > p {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+/************************************************
+ * LANGUAGES
+ ***********************************************/
+
+#languages {
+    width: 100%;
+    max-width: 350px;
+    margin: -40px auto 20px;
+    padding: 5px;
+    border: 1px solid var(--black);
+    border-top: 0;
+    background-color: white;
+    text-align: center;
+}
+
+#languages > * {
+    margin-right: 10px;
+}
+
+#languages > :last-child {
+    margin-right: 0;
+}
+
+#languages > a.my-locale {
+    font-weight: bold;
+    border-bottom: 1px dashed var(--brown);
+}
+
+/************************************************
+ * SECTIONS #the-farm and #the-place
+ ***********************************************/
+
+#the-farm, #the-place {
+    width: 50%;
+    float: left;
+}
+
+#the-farm {
+    padding-right: 40px;
+}
+
+#the-place iframe {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid var(--black);
+}
+
+#the-farm > ul > li > a::after {
+    content: '📷';
+    font-size: 1.2em;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/************************************************
+ * MAIN (id #the-goats)
+ ***********************************************/
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+main > h2 {
+    margin-bottom: 0;
+    flex: 100%;
+    text-align: center;
+    text-decoration: underline var(--ocre);
+}
+
+main > p:first-of-type {
+    margin-bottom: 50px;
+    flex: 100%;
+    text-align: center;
+    font-style: italic;
+}
+
+main > div.column {
+    flex: 16.6%;
+    max-width: 16.6%;
+}
+
+/************************************************
+ * MAIN > GOAT CARD
+ ***********************************************/
+
+.goat-card {
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    cursor: pointer;
+    text-align: center;
+    transition: transform .3s ease;
+}
+
+.goat-card:hover {
+    transform: scale(1.5) rotate(0) !important;
+    z-index: 100 !important;
+}
+
+.goat-card > img {
+    width: 100%;
+    height: auto;
+}
+
+.goat-card > figcaption {
+    margin: 0;
+    font-family: var(--title-font-family);
+    font-weight: bold;
+}
+
+.goat-card.noName {
+    background-color: var(--ocre);
+}
+
+.goat-card.noName > figcaption {
+    color: white;
+    font-size: 1.3em;
+}
+
+/************************************************
+ * MAIN > GOAT in FULL mode
+ ***********************************************/
+
+/*** THE BOX ***/
+.goat-full {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px auto auto;
+    gap: 40px;
+}
+
+.goat-full:target {
+    transform: scale(1);
+}
+
+/*** TITLE ***/
+.goat-full > h1 {
+    text-decoration: underline var(--black);
+    text-align: center;
+    place-self: center;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.goat-full.noName > h1 {
+    color: var(--ocre);
+}
+
+/*** NAV ***/
+.goat-full > nav {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+/*** PICTURES ***/
+.goat-full > section.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    place-items: center;
+}
+
+.goat-full > section.pictures > img {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.goat-full > section.pictures > img:first-child {
+    margin-top: 0px;
+}
+
+/*** INFO ***/
+.goat-full > section.info {
+    font-size: 1.5em;
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.goat-full > section.info > p {
+    text-align: center;
+}
+
+/*** FORM for a NAME ***/
+.form-name {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+.form-name > form {
+    padding: 10px;
+    border: 1px solid var(--black);
+}
+
+.form-name h2 {
+    margin: 0 auto 25px;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.form-name p {
+    text-align: inherit;
+}
+
+.form-name input[type=submit] {
+    padding: 10px;
+    border: 1px solid var(--black);
+    font-weight: bold;
+}
+
+/************************************************
+ * CSS FOR TABLETS AND SMARTPHONES
+ ************************************************/
+
+@media (max-width: 1200px) {
+    body {
+        line-height: 1.5;
+    }
+
+    #page {
+        max-width: 1000px;
+    }
+    
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    main > div.column {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+
+    #the-farm, #the-place {
+        width: 100%;
+        float: none;
+    }
+    
+    #the-farm {
+        padding-right: 0;
+    }
+
+    .goat-card:hover {
+        transform: scale(1.25) rotate(0) !important;
+    }
+
+    .goat-full {
+        display: block;
+        overflow: auto;
+    }
+
+    .form-name {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    #page {
+        padding: 10px;
+    }
+
+    #languages {
+        margin-top: -10px;
+    }
+
+    .modal {
+        margin-left: -10px;
+    }
+
+    main > div.column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .goat-card {
+        transform: rotate(0) !important;
+    }
+}
+
+@media (max-width: 400px) {
+    main > div.column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
