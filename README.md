@@ -20,7 +20,7 @@ Main characteristics
 
 - Mainly written in **vanilla php 7.4** (without framework neither library)
 - MVC architecture
-- Templates easy to read, written in html/php using the "short echo" syntaxt **<?= ?>**
+- Templates easy to read, written in html/php using the "short echo" syntaxt **\<?= ?>**
 - Responsive design
 - Powered in 2 languages (french and english) with an easy system to have more translations
 - The little **data** are stored **as php arrays** (easy to write and read by humans, easy to access and use by php).
