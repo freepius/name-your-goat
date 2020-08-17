@@ -25,7 +25,7 @@ class Request
 
         return htmlspecialchars(stripslashes(trim($_GET[$key])));
     }
-     
+
     /**
      * Return the value of a POST data.
      * The value is cleaned and secured.
@@ -46,8 +46,6 @@ class Request
      */
     public static function route() : string
     {
-        return isset($_SERVER['PATH_INFO'])  ?
-            substr($_SERVER['PATH_INFO'], 1) :
-            '';
+        return substr($_SERVER['PATH_INFO'] ?? $_SERVER['ORIG_PATH_INFO'] ?? '', 1);
     }
 }
