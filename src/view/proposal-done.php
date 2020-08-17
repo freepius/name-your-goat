@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="main.css">
 
-    <title><?= t('head.title') ?></title>
+    <title><?= t('head.title', isAuth()) ?></title>
 
     <style>
         #page > p {
