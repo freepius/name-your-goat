@@ -1,6 +1,14 @@
 <?php
+
 $numImg = count($img);
+$imgElement = fn ($img) =>
+    "<img src=\"img/$parent/$img.jpg\" alt=\"\">";
+
 for ($i = 0; $i < $numImg; $i++) : ?>
+    <a href="#<?=$img[$i]?>" class="thumb">
+        <?=$imgElement($img[$i].'-thumb')?>
+    </a>
+
     <figure id="<?=$img[$i]?>" class="modal">
         <nav>
             <?= isset($img[$i-1]) ? "<a href=\"#{$img[$i-1]}\" rel=\"prev\">&larr;</a>" : '' ?>
@@ -8,7 +16,7 @@ for ($i = 0; $i < $numImg; $i++) : ?>
             <?= isset($img[$i+1]) ? "<a href=\"#{$img[$i+1]}\" rel=\"next\">&rarr;</a>" : '' ?>
         </nav>
 
-        <img src="img/<?=$parent.'/'.$img[$i]?>.jpg" alt="">
+        <?=$imgElement($img[$i])?>
 
         <figcaption><?=t($parent.'.'.$img[$i])?></figcaption>
     </figure>

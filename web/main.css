@@ -16,7 +16,7 @@
 * {
     box-sizing: border-box;
 }
-  
+
 body {
     margin: 0;
     color: var(--black);
@@ -74,7 +74,7 @@ p a, ul a {
     max-width: 1400px;
     margin: 20px auto;
     padding: 40px;
-	background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /************************************************
@@ -199,11 +199,20 @@ figure.modal > figcaption {
     border: 1px solid var(--black);
 }
 
-#the-farm > ul > li > a::after {
-    content: '📷';
-    font-size: 1.2em;
-    margin-left: 5px;
-    vertical-align: middle;
+/************************************************
+ * GALLERY (id #gallery)
+ ***********************************************/
+
+#gallery {
+    clear: both;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#gallery > a.thumb > img {
+    width: 100%;
 }
 
 /************************************************
@@ -214,7 +223,6 @@ main {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    clear: both;
 }
 
 main > h2 {
@@ -385,7 +393,7 @@ main > div.column {
     #page {
         max-width: 1000px;
     }
-    
+
     h1 {
         font-size: 1.7em;
     }
@@ -404,7 +412,7 @@ main > div.column {
         width: 100%;
         float: none;
     }
-    
+
     #the-farm {
         padding-right: 0;
     }
@@ -420,6 +428,12 @@ main > div.column {
 
     .form-name {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    #gallery {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -447,6 +461,10 @@ main > div.column {
 }
 
 @media (max-width: 400px) {
+    #gallery {
+        grid-template-columns: 1fr;
+    }
+
     main > div.column {
         flex: 100%;
         max-width: 100%;

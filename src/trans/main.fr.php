@@ -22,6 +22,9 @@ return [
 
     "the-farm" => [
         "title" => "Sur notre jolie p'tite ferme, on&nbsp;a...",
+    ],
+
+    "gallery" => [
         'chickens' => 'Nos 3 belles poules : Conquistador (la blanche), Martine (la noire) et Larousse (la rousse)',
         'droppie' => 'Droppie, une <i>bergère des Pyrénées</i>, notre future chienne de troupeau',
         'bees' => 'Notre première petite ruche. La colonnie se porte bien !',

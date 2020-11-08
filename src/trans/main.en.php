@@ -10,7 +10,7 @@ return [
     "subtitle" => fn(bool $auth) => $auth
         ? "Help us to name our goats!"
         : "Discover our pretty goats!",
-    
+
     "subtitle.hello" => "Hello <u>%0</u>!",
 
     "Close" => true,
@@ -22,6 +22,9 @@ return [
 
     "the-farm" => [
         "title" => "On our pretty little farm, we&nbsp;have...",
+    ],
+
+    "gallery" => [
         'chickens' => 'Our 3 pretty chickens: Conquistador (the white), Martine (the black) and Larousse (the red)',
         'droppie' => 'Droppie, a <i>Pyrenean Shepherd</i>, our future herd dog',
         'bees' => 'Our first little beehive. The colony is doing well!',

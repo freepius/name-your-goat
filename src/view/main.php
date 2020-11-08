@@ -36,20 +36,20 @@
             <li>2 chèvres adultes de race Alpine (les cheffes)</li>
             <li>1 chevrette de race Alpine (2 mois, née ici)</li>
             <li>2 chevrettes de race Provençales (5 mois)</li>
-            <li><a href="#chickens">3 poules</a> mangeuses de larves de mouches</li>
-            <li>1 adorable <a href="#droppie">chienne de berger</a></li>
-            <li>1 <a href="#bees">ruchette</a> et ses centaines d'abeilles</li>
-            <li>Et 2 <a href="#farmers">apprentis paysans</a> :-)</li>
+            <li>3 poules mangeuses de larves de mouches</li>
+            <li>1 adorable chienne de berger</li>
+            <li>1 ruchette et ses centaines d'abeilles</li>
+            <li>Et 2 apprentis paysans :-)</li>
         <?php else : ?>
             <li>21 kid goats of the Rove breed (6 months)</li>
             <li>2 billy goats of the Rove breed (1 adult and 1 kid)</li>
             <li>2 goats of the Alpine breed (the leaders)</li>
             <li>1 kid goat of the Alpine breed (2 months, borned here)</li>
             <li>2 kid goats of the Provençale breed (5 months)</li>
-            <li><a href="#chickens">3 chickens</a> which eat fly larvae</li>
-            <li>1 adorable <a href="#droppie">shepherd female dog</a></li>
-            <li>1 <a href="#bees">small hive</a> and its hundreds of bees</li>
-            <li>Et 2 <a href="#farmers">little farmers</a> :-)</li>
+            <li>3 chickens which eat fly larvae</li>
+            <li>1 adorable shepherd female dog</li>
+            <li>1 small hive and its hundreds of bees</li>
+            <li>Et 2 little farmers :-)</li>
         <?php endif; ?>
         </ul>
 
@@ -98,13 +98,6 @@
             <?php endif; ?>
         </div>
         <?php endif; ?>
-
-        <?php
-        render('_gallery', [
-            'parent' => 'the-farm',
-            'img' => ['chickens', 'droppie', 'bees', 'farmers'],
-        ]);
-        ?>
     </section>
 
     <section id="the-place">
@@ -124,6 +117,15 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.2303672939047!2d4.477103182498977!3d45.01523570127451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDAwJzU0LjgiTiA0wrAyOCc0NS4zIkU!5e1!3m2!1sfr!2sfr!4v1594037730383!5m2!1sfr!2sfr"
                 width="100%" height="<?= isAuth() ? '600' : '400' ?>" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
+    </section>
+
+    <section id="gallery">
+        <?php
+        render('_gallery', [
+            'parent' => 'gallery',
+            'img' => ['chickens', 'droppie', 'bees', 'farmers'],
+        ]);
+        ?>
     </section>
 
     <main id="the-goats">
