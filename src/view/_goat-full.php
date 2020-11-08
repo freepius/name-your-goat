@@ -18,7 +18,6 @@
             <?=tg('goat.birthyear', $birthyear)?>
             <?=$birthday ? ' ('.tg('goat.birthday', ldate($birthday)).')' : ''?>
             <br>
-            <?=$motherName ? tg('goat.motherName', $motherName).'<br>' : ''?>
             <?=tg('goat.breed', $breed)?><br>
             <?=$name && $themeOfName ? tg('goat.themeOfName', _t('themes', $themeOfName, [], true)).'<br>' : ''?>
         </p>

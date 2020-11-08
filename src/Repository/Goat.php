@@ -10,7 +10,7 @@ class Goat
     /**
      * Return an array of [ID => goat]
      * where a goat is an object of {
-     *   ID, godparent, themeOfName, name, birthyear, birthday, breed, motherName, pictures
+     *   ID, godparent, themeOfName, name, birthyear, birthday, breed, pictures
      * }
      */
     public static function all() : array
@@ -19,7 +19,7 @@ class Goat
             return self::$goats;
         }
 
-        $attrs = ['godparent', 'themeOfName', 'name', 'birthyear', 'birthday', 'breed', 'motherName'];
+        $attrs = ['godparent', 'themeOfName', 'name', 'birthyear', 'birthday', 'breed'];
 
         $goats = include __DIR__.'/../data/goats.php';
 

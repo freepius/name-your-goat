@@ -9,7 +9,6 @@ return [
         "birthday" => "exactly the %0",
         "birthyear" => "I was born in <b>%0</b>",
         "breed" => "I am of the <b>%0</b> breed",
-        "motherName" => "My mother's name is <b>%0</b>",
         "name" => "My name is %0",
         "themeOfName" => "My name follows the theme: <b>%0</b>",
     ],
