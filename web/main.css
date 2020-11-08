@@ -4,6 +4,7 @@
 
 :root {
     --black: #3b3721;
+    --grey: #999;
     --brown: #774e24;
     --ocre: rgb(160, 80, 80);
     --title-font-family: Montserrat, "Helvetica Neue", sans-serif;
@@ -74,7 +75,64 @@ p a, ul a {
     max-width: 1400px;
     margin: 20px auto;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/************************************************
+ * COMPONENT > INLINE LIST
+ ***********************************************/
+
+ul.list-inline {
+    text-align: justify;
+}
+
+ul.list-inline li {
+    display: inline;
+}
+
+ul.list-inline li:after {
+    margin: 0 10px;
+    content: " /";
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+ul.list-inline li:last-child:after {
+    content: none;
+}
+
+/************************************************
+ * COMPONENT > DIVIDERS
+ ***********************************************/
+
+.hr-top::before,
+.hr-double::before,
+.hr-bottom:not(:last-child):after,
+.hr-double:not(:last-child):after {
+    content: "";
+    display: block;
+    width: 50%;
+    margin: 25px auto;
+    border: 1px solid var(--grey);
+}
+
+.arrow-down:not(:last-child):after {
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    content: "↓";
+    color: var(--grey);
+}
+
+/************************************************
+ * COMPONENT > BOX
+ ***********************************************/
+
+.box {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 0px var(--grey);
+    background-color: white;
 }
 
 /************************************************
@@ -186,17 +244,25 @@ figure.modal > figcaption {
 #the-farm, #the-place {
     width: 50%;
     float: left;
+    margin-bottom: 20px;
 }
 
 #the-farm {
     padding-right: 40px;
 }
 
-#the-place iframe {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid var(--black);
+#the-farm > ul {
+    padding: 0 50px;
+}
+
+#the-farm > p {
+    margin-bottom: 0;
+}
+
+#the-farm > div {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--grey);
 }
 
 /************************************************
@@ -208,7 +274,6 @@ figure.modal > figcaption {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    margin-top: 10px;
 }
 
 #gallery > a.thumb > img {

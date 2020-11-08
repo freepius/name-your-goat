@@ -29,34 +29,34 @@
 
     <section id="the-farm">
         <h2><?= t('the-farm.title') ?></h2>
-        <ul>
+        <ul class="list-inline">
         <?php if (locale('fr')) : ?>
-            <li>21 chèvres de race Rove</li>
-            <li>2 boucs de race Rove</li>
-            <li>2 chèvres de race Alpine (les cheffes)</li>
-            <li>1 chevrette de race Alpine (née ici)</li>
-            <li>2 chèvres de race Provençales</li>
-            <li>3 poules mangeuses de larves de mouches</li>
-            <li>1 adorable chienne de berger</li>
-            <li>1 ruchette et ses centaines d'abeilles</li>
-            <li>Et 2 apprentis paysans :-)</li>
+            <li>21 chèvres de race <big>Rove</big></li>
+            <li>2 boucs de race <big>Rove</big></li>
+            <li>2 chèvres de race Alpine (les cheffes)</li>
+            <li>1 chevrette de race Alpine <big>(née ici)</big></li>
+            <li>2 chèvres de race Provençales</li>
+            <li>3 poules mangeuses de larves de mouches</li>
+            <li><big>1 adorable chienne de berger</big></li>
+            <li>1 ruchette et ses centaines d'abeilles</li>
+            <li><big>Et 2 apprentis paysans :-)</big></li>
         <?php else : ?>
-            <li>21 goats of the Rove breed</li>
-            <li>2 billy goats of the Rove breed</li>
-            <li>2 goats of the Alpine breed (the leaders)</li>
-            <li>1 kid goat of the Alpine breed (borned here)</li>
-            <li>2 goats of the Provençale breed</li>
-            <li>3 chickens which eat fly larvae</li>
-            <li>1 adorable shepherd female dog</li>
-            <li>1 small hive and its hundreds of bees</li>
-            <li>Et 2 little farmers :-)</li>
+            <li>21 goats of the <big>Rove</big> breed</li>
+            <li>2 billy goats of the <big>Rove</big> breed</li>
+            <li>2 goats of the Alpine breed (the leaders)</li>
+            <li>1 kid goat of the Alpine breed <big>(borned here)</big></li>
+            <li>2 goats of the Provençale breed</li>
+            <li>3 chickens which eat fly larvae</li>
+            <li><big>1 adorable shepherd female dog</big></li>
+            <li>1 small hive and its hundreds of bees</li>
+            <li><big>Et 2 little farmers :-)</big></li>
         <?php endif; ?>
         </ul>
 
-        <p>
+        <p class="hr-top arrow-down">
         <?php if (locale('fr')) : ?>
             Il y a Droppie, Coco, Tima, Chocolat, Vanille, Nuage, Conquistador, etc.
-            Mais il reste encore <strong><?= $countNoNamedGoats ?> chevrettes sans prénom</strong>.
+            Mais il reste encore <strong><?= $countNoNamedGoats ?> chèvres sans prénom</strong>.
             <?= isAuth() ? 'Alors on compte sur toi et ton inspiration !' : '' ?>
         <?php else : ?>
             There are Droppie, Coco, Tima, Chocolat, Vanille, Nuage, Conquistador, etc.
@@ -66,9 +66,9 @@
         </p>
 
         <?php if (isAuth()) : ?>
-        <div>
+        <div class="box">
             <?php if (locale('fr')) : ?>
-            <strong>Consignes pour nommer ta chèvre :</strong>
+            <strong>Consignes pour nommer ta chèvre</strong>
             <ol>
                 <li>Tu peux proposer plusieurs noms, il n'y a pas de limite.</li>
                 <li>Parmi toutes tes propositions, nous en choisirons une seule&nbsp;!</li>
@@ -82,7 +82,7 @@
                 </li>
             </ol>
             <?php else : ?>
-            <strong>Instructions to name your goat:</strong>
+            <strong>Instructions to name your goat</strong>
             <ol>
                 <li>You can propose several names, there is no limit.</li>
                 <li>Among all your proposals, we will choose only one!</li>
@@ -113,7 +113,7 @@
             More precisely here...
             <?php endif; ?>
         </p>
-        <div id="map">
+        <div id="map" class="box">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.2303672939047!2d4.477103182498977!3d45.01523570127451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDAwJzU0LjgiTiA0wrAyOCc0NS4zIkU!5e1!3m2!1sfr!2sfr!4v1594037730383!5m2!1sfr!2sfr"
                 width="100%" height="<?= isAuth() ? '600' : '400' ?>" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
