@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="10; URL=/"> 
 
     <link rel="stylesheet" href="main.css">
 
@@ -28,16 +27,14 @@
         N'hésite pas à proposer d'autres noms, pour la même chèvre ou pour une autre.
         Nous t'enverrons un email pour te dire laquelle de tes propositions nous avons finalement choisie !
         <br><br>
-        Dans quelques secondes, tu vas être redirigé vers la page d'accueil du trombino'chèvres.
-        <a href="/">Sinon clique ici.</a>
+        <a href="/">Clique ici pour retourner à l'accueil.</a>
     <?php else : ?>
         <strong>Thanks <?= $user ?> for your proposal!</strong> We recorded it well.
         <br><br>
         Do not hesitate to propose other names, for the same goat or an other one.
         We will send you an email to tell you which of your proposals we have finally chosen!
         <br><br>
-        You will be redirected on the <i>facegoats</i> homepage in few seconds.
-        <a href="/">Otherwise click here.</a>
+        <a href="/">Click here to go back to the home page.</a>
     <?php endif; ?>
 
         <br><br>

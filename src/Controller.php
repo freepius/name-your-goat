@@ -58,7 +58,7 @@ class Controller
         if (! $goat = $goats[$id] ?? null) {
             throw new \ErrorException("The goat '$id' does not exist.");
         }
-        
+
         if ($goat->name) {
             throw new \ErrorException("The goat '$id' already has a name ({$goat->name}).");
         }
@@ -68,7 +68,7 @@ class Controller
         }
 
         Repository\Proposal::do($user, $goat, $name, $theme);
-    
+
         render('proposal-done', ['goat' => $goat->ID, 'user' => $user->name]);
     }
 

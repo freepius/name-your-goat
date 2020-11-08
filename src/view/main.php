@@ -31,21 +31,21 @@
         <h2><?= t('the-farm.title') ?></h2>
         <ul>
         <?php if (locale('fr')) : ?>
-            <li>21 chevrettes de race Rove (6 mois)</li>
-            <li>2 boucs de race Rove (1 adulte et 1 petit)</li>
-            <li>2 chèvres adultes de race Alpine (les cheffes)</li>
-            <li>1 chevrette de race Alpine (2 mois, née ici)</li>
-            <li>2 chevrettes de race Provençales (5 mois)</li>
+            <li>21 chèvres de race Rove</li>
+            <li>2 boucs de race Rove</li>
+            <li>2 chèvres de race Alpine (les cheffes)</li>
+            <li>1 chevrette de race Alpine (née ici)</li>
+            <li>2 chèvres de race Provençales</li>
             <li>3 poules mangeuses de larves de mouches</li>
             <li>1 adorable chienne de berger</li>
             <li>1 ruchette et ses centaines d'abeilles</li>
             <li>Et 2 apprentis paysans :-)</li>
         <?php else : ?>
-            <li>21 kid goats of the Rove breed (6 months)</li>
-            <li>2 billy goats of the Rove breed (1 adult and 1 kid)</li>
+            <li>21 goats of the Rove breed</li>
+            <li>2 billy goats of the Rove breed</li>
             <li>2 goats of the Alpine breed (the leaders)</li>
-            <li>1 kid goat of the Alpine breed (2 months, borned here)</li>
-            <li>2 kid goats of the Provençale breed (5 months)</li>
+            <li>1 kid goat of the Alpine breed (borned here)</li>
+            <li>2 goats of the Provençale breed</li>
             <li>3 chickens which eat fly larvae</li>
             <li>1 adorable shepherd female dog</li>
             <li>1 small hive and its hundreds of bees</li>
