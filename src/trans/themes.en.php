@@ -9,4 +9,5 @@ return [
     "Alsace" => "Alsace (french territory)",
     "Surnoms d'enfants" => "Children nicknames",
     "Plantes aromatiques" => "Aromatic plants",
+    "Amitié" => "Friendship",
 ];
