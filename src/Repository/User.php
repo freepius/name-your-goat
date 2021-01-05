@@ -10,7 +10,7 @@ class User
     /**
      * Return an array of [ID => user]
      * where a user is an object of {
-     *   token, name, locale
+     *   token, name, lang, goatNamed
      * }
      */
     public static function all() : array
@@ -19,7 +19,7 @@ class User
             return self::$users;
         }
 
-        $attrs = ['token', 'name', 'locale'];
+        $attrs = ['token', 'name', 'lang', 'goatNamed'];
 
         return self::$users = array_map(
             fn(array $user) => (object) array_combine($attrs, $user),

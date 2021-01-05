@@ -56,8 +56,9 @@ class User
     /**
      * Return the locale for the current user.
      * 1) Search in cookies (because the user can set himself the locale).
-     * 2) Then search in the headers of the user request.
-     * 3) Otherwise return the default locale.
+     * 2) If user is authorized, return its stored locale.
+     * 3) If not, search in the headers of the user request.
+     * 4) Otherwise return the default locale.
      */
     public static function locale() : string
     {
@@ -68,6 +69,11 @@ class User
 
         // Lang in cookies
         $locale = self::langToLocale($_COOKIE['NameYourGoat_User_Locale'] ?? '');
+
+        // Lang in User repository
+        if (! $locale && self::isAuth()) {
+            $locale = self::langToLocale(self::$fullUser->lang);
+        }
 
         // Lang in the request headers
         if (! $locale) {

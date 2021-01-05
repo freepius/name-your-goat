@@ -3,7 +3,7 @@
         <?php if ($prev) : ?>
             <a href="#<?=$prev?>" rel="prev">&larr;</a>
         <?php endif ?>
-    
+
         <a href="#the-goats" rel="parent"><?=t('Close')?></a>
 
         <?php if ($next) : ?>
