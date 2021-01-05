@@ -10,4 +10,5 @@ return [
     "Surnoms d'enfants" => "Children nicknames",
     "Plantes aromatiques" => "Aromatic plants",
     "Amitié" => "Friendship",
+    "Cols du Tour de France" => "Mountain passes of the Tour de France"
 ];

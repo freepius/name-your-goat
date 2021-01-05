@@ -13,7 +13,7 @@ return [
 '01090'  => [null,              null,                        null,        2020, null,         'Rove'],
 '01091'  => ['Flore',           'Noms en «ette»',            'Zézette',   2020, null,         'Rove'],
 '01092'  => [null,              null,                        null,        2020, null,         'Rove'],
-'01093'  => [null,              null,                        null,        2020, null,         'Rove'],
+'01093'  => ['Johannes',        'Cols du Tour de France',    'Madeleine', 2020, null,         'Rove'],
 '01094'  => ['Monique & J-F',   'Plantes aromatiques',       'Lavande',   2020, null,         'Rove'],
 '01095'  => ['Jasper & Darcie', 'Amitié',                    'Amiga',     2020, null,         'Rove'],
 'NC-1'   => [null,              null,                        null,        2020, null,         'Rove'],
