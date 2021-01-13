@@ -11,4 +11,7 @@ return [
     "Plantes aromatiques" => "Aromatic plants",
     "Amitié" => "Friendship",
     "Cols du Tour de France" => "Mountain passes of the Tour de France"
+    "Montagne" => "Mountain",
+    "Amérique du Sud ou Isabel Allende" => "South America or Isabel Allende",
+    "Instruments de musique" => "Music instruments",
 ];
