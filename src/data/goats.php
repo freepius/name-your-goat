@@ -1,7 +1,7 @@
 <?php
 
 return [
-'01081'  => [null,              null,                                null,        2020, null,         'Rove'],
+'01081'  => ['Fabian',          'Légumineuses',                      'Haricot',   2020, null,         'Rove'],
 '01082'  => ['Émilie & Lucas',  'Instruments de musique',            'Trompette', 2020, null,         'Rove'],
 '01083'  => ['Annemarie',       'Écrivaine Astrid Lindgren',         'Astrid',    2020, null,         'Rove'],
 '01084'  => ['Marie-Leïla',     'Numérique ou Peinture',             'Pixel',     2020, null,         'Rove'],
@@ -16,7 +16,7 @@ return [
 '01093'  => ['Johannes',        'Cols du Tour de France',            'Madeleine', 2020, null,         'Rove'],
 '01094'  => ['Monique & J-F',   'Plantes aromatiques',               'Lavande',   2020, null,         'Rove'],
 '01095'  => ['Jasper & Darcie', 'Amitié',                            'Amiga',     2020, null,         'Rove'],
-'NC-1'   => [null,              null,                                null,        2020, null,         'Rove'],
+'NC-1'   => ['Émilie & Lucas',  'Femmes au destin exceptionnel',     'Nzinga',    2020, null,         'Rove'],
 'NC-2'   => ['Annemarie',       'Australie',                         'Australie', 2020, null,         'Rove'],
 'NC-3'   => [null,              null,                                null,        2020, null,         'Rove'],
 'NC-4'   => [null,              null,                                null,        2020, null,         'Rove'],

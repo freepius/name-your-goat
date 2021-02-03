@@ -14,4 +14,6 @@ return [
     "Montagne" => "Mountain",
     "Amérique du Sud ou Isabel Allende" => "South America or Isabel Allende",
     "Instruments de musique" => "Music instruments",
+    "Femmes au destin exceptionnel" => "Women with an exceptional destiny",
+    "Légumineuses" => "Legumes",
 ];
