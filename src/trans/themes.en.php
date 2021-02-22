@@ -16,4 +16,5 @@ return [
     "Instruments de musique" => "Music instruments",
     "Femmes au destin exceptionnel" => "Women with an exceptional destiny",
     "Légumineuses" => "Legumes",
+    "Bois et Forêt" => "Wood and Forest",
 ];
