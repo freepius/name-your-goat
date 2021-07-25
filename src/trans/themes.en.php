@@ -17,4 +17,9 @@ return [
     "Femmes au destin exceptionnel" => "Women with an exceptional destiny",
     "Légumineuses" => "Legumes",
     "Bois et Forêt" => "Wood and Forest",
+    "Paysages" => "Landscapes",
+    "Oiseaux" => "Birds",
+    "Astronomie" => "Astronomy",
+    "Fruits exotiques" => "Exotic fruits",
+    "Adjectifs" => "Adjectives",
 ];
